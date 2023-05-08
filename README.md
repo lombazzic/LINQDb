@@ -13,5 +13,23 @@
 -Ora possiamo iniziare a scrivere il nostro codice\
 -La riga di codice che permette di accedere a alla libreria è: \
 ###
-  SQLiteConnection cn1 = new SQLiteConnection("chinook.db");
+    SQLiteConnection cn1 = new SQLiteConnection("chinook.db");
 ###
+-Quella che ci permette di selezionare quello che vogliamo dal DB è:\
+###
+    var tblArtist = cn1.Query<Artist>("select * from artists");
+###
+-Il comando che ci permette di ordinare gli ID degli artistiè:\
+###
+    var temporanea = tblArtist.OrderByDescending(x => x.Name).Max( y => y.ArtistId );
+###
+-Poi facciamo un foreach (si passa tutti i record e scrive il nome), e poi stampiamo anche il numero di record che sono presenti:\
+###
+    foreach(var record in tblArtist)
+    {
+        Console.WriteLine( $"{record.Name}" );
+    }
+    Console.WriteLine($"{temporanea}");
+###
+
+-Il programma per ora termina in qui in caso di nuovi aggiornamenti al codice verranno inseriti qui.

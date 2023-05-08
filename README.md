@@ -19,7 +19,7 @@
 ###
     var tblArtist = cn1.Query<Artist>("select * from artists");
 ###
--Il comando che ci permette di ordinare gli ID degli artistiè:
+-Il comando che ci permette di ordinare gli ID degli artisti è:
 ###
     var temporanea = tblArtist.OrderByDescending(x => x.Name).Max( y => y.ArtistId );
 ###

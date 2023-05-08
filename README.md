@@ -32,4 +32,7 @@
     Console.WriteLine($"{temporanea}");
 ###
 
+-Il rusultato finale dovrebbe essere simile a questo:\
+![image](https://user-images.githubusercontent.com/116791046/236854125-4da88d4d-65a3-4655-8d51-cacb5ba07861.png)
+
 -Il programma per ora termina in qui in caso di nuovi aggiornamenti al codice verranno inseriti qui.
